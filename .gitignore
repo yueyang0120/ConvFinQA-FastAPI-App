@@ -49,5 +49,4 @@ logs/
 *.log
 
 # Local testing data
-data/
 temp/
