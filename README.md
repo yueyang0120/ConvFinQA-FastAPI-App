@@ -70,7 +70,7 @@ This setup makes it easy to track everything and explain each step clearly.
 
 ### Technical Stack & Design Choices
 
-#### Why LangGraph?
+#### **Why LangGraph?**
 
 LangGraph makes the workflow way more maintainable:
 
@@ -79,7 +79,7 @@ LangGraph makes the workflow way more maintainable:
 3. **Easy Updates**: Change individual parts without breaking everything
 4. **Keeps Track**: Manages all the state so you don't have to
 
-#### Debugging Made Easy
+#### **Debugging Made Easy**
 
 Every operation gets logged with its inputs and outputs, like this: 
 
@@ -109,7 +109,7 @@ The logging structure makes debugging and logic tracing way easier:
 
 When something breaks, you get clear error messages pointing to the exact issue. No more guessing which part of the workflow failed - you'll know precisely where to look.
 
-#### Why LLMs Instead of Pandas When Doing Data Extraction with Tables?
+#### **Why LLMs Instead of Pandas When Doing Data Extraction with Tables?**
 
 I chose LLM-based table parsing over Pandas because it handles real-world financial data better:
 
@@ -402,7 +402,7 @@ Errors: 0 (0.00%)
 ===========================
 ```
 
-#### Why We Use These Three Metrics
+#### Why These Three Metrics
 
 1. **Exact Match (21%)**
    - **Purpose**: Verifies character-for-character correctness after normalization
