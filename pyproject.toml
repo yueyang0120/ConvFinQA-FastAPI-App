@@ -1,0 +1,30 @@
+[project]
+name = "finqa"
+version = "0.1.0"
+description = "Financial Question Answering system"
+authors = [
+    {name = "User"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "fastapi (>=0.115.11,<0.116.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+    "pydantic (>=2.10.6,<3.0.0)",
+    "starlette (>=0.46.1,<0.47.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "openai (>=1.66.3,<2.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "sympy (>=1.13.3,<2.0.0)",
+    "pytest (>=8.3.5,<9.0.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "numpy (>=2.2.3,<3.0.0)",
+    "langchain (>=0.3.20,<0.4.0)",
+    "langchain-openai (>=0.3.8,<0.4.0)",
+    "langgraph (>=0.3.11,<0.4.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,6307 @@
+{
+  "results": [
+    {
+      "example_id": "Single_JKHY/2009/page_28.pdf-3",
+      "question": "what was the percentage change in the net cash from operating activities from 2008 to 2009",
+      "expected_answer": "14.1%",
+      "predicted_answer": "14.1%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage change in the net cash from operating activities from 2008 to 2009",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_cash_2009",
+          "arg2": "text",
+          "res": "206588"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_cash_2008",
+          "arg2": "text",
+          "res": "181001"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "net_cash_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "net_cash_2009",
+          "arg2": "net_cash_2008",
+          "res": "25587"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "net_cash_2009",
+          "arg2": "net_cash_2008",
+          "res": "14.136385986817752"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "14.1%"
+        }
+      ],
+      "variables": {
+        "net_cash_2009": 206588,
+        "net_cash_2008": 181001,
+        "net_cash_change": 25587,
+        "percentage_change": 14.136385986817752
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_RSG/2008/page_114.pdf-2",
+      "question": "what was the percent of the growth in the revenues from 2007 to 2008",
+      "expected_answer": "1.3%",
+      "predicted_answer": "126.9%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percent of the growth in the revenues from 2007 to 2008",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_2008",
+          "arg2": "table[row=2, column=2, revenue in row for 2008]",
+          "res": "9362.2"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_2007",
+          "arg2": "table[row=1, column=2, revenue in row for 2007]",
+          "res": "9244.9"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "revenue_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_growth",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "revenue_2008",
+          "arg2": "revenue_2007",
+          "res": "117.30000000000109"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "revenue_2008",
+          "arg2": "revenue_2007",
+          "res": "1.2688076669298867"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "126.9%"
+        }
+      ],
+      "variables": {
+        "revenue_2008": 9362.2,
+        "revenue_2007": 9244.9,
+        "revenue_change": 117.30000000000109,
+        "percentage_growth": 1.2688076669298867
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_AAPL/2002/page_23.pdf-1",
+      "question": "what was the percentage change in net sales from 2000 to 2001?",
+      "expected_answer": "-32%",
+      "predicted_answer": "-32.8%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage change in net sales from 2000 to 2001?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_sales_2001",
+          "arg2": "text",
+          "res": "5363"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_sales_2000",
+          "arg2": "text",
+          "res": "7983"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "net_sales_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_net_sales",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "net_sales_2001",
+          "arg2": "net_sales_2000",
+          "res": "-2620"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "net_sales_2001",
+          "arg2": "net_sales_2000",
+          "res": "-32.81974195164725"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-32.8%"
+        }
+      ],
+      "variables": {
+        "net_sales_2001": 5363,
+        "net_sales_2000": 7983,
+        "net_sales_change": -2620,
+        "percentage_change_net_sales": -32.81974195164725
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_UPS/2009/page_33.pdf-2",
+      "question": "what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?",
+      "expected_answer": "-26.16%",
+      "predicted_answer": "-25.6%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "ups_cumulative_return_2009",
+          "arg2": "table[row=5, column=3, cumulative return for UPS in 2009]",
+          "res": "75.95"
+        },
+        {
+          "op": "extract",
+          "arg1": "sp500_cumulative_return_2009",
+          "arg2": "table[row=5, column=2, cumulative return for S&P 500 in 2009]",
+          "res": "102.11"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "cumulative_return_difference",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_difference",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "ups_cumulative_return_2009",
+          "arg2": "sp500_cumulative_return_2009",
+          "res": "-26.159999999999997"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "ups_cumulative_return_2009",
+          "arg2": "sp500_cumulative_return_2009",
+          "res": "-25.619430026442068"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-25.6%"
+        }
+      ],
+      "variables": {
+        "ups_cumulative_return_2009": 75.95,
+        "sp500_cumulative_return_2009": 102.11,
+        "cumulative_return_difference": -26.159999999999997,
+        "percentage_difference": -25.619430026442068
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_UPS/2009/page_33.pdf",
+      "question": "what is the roi of an investment in ups in 2004 and sold in 2006?",
+      "expected_answer": "-8.9%",
+      "predicted_answer": "-8.9%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the roi of an investment in ups in 2004 and sold in 2006?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "investment_2004",
+          "arg2": "text",
+          "res": "100.0"
+        },
+        {
+          "op": "extract",
+          "arg1": "value_2006",
+          "arg2": "text",
+          "res": "91.06"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "investment_return",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "roi_percentage",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "investment_2004",
+          "arg2": "value_2006",
+          "res": "-8.939999999999998"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "investment_2004",
+          "arg2": "investment_return",
+          "res": "-8.939999999999998"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-8.9%"
+        }
+      ],
+      "variables": {
+        "investment_2004": 100.0,
+        "value_2006": 91.06,
+        "investment_return": -8.939999999999998,
+        "roi_percentage": -8.939999999999998
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_UPS/2009/page_33.pdf",
+      "question": "what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?",
+      "expected_answer": "-26.16%",
+      "predicted_answer": "-25.6%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "ups_cumulative_return_2009",
+          "arg2": "table[row=5, column=3, cumulative return for UPS in 2009]",
+          "res": "75.95"
+        },
+        {
+          "op": "extract",
+          "arg1": "sp500_cumulative_return_2009",
+          "arg2": "table[row=5, column=2, cumulative return for S&P 500 in 2009]",
+          "res": "102.11"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "cumulative_return_difference",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_difference",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "ups_cumulative_return_2009",
+          "arg2": "sp500_cumulative_return_2009",
+          "res": "-26.159999999999997"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "sp500_cumulative_return_2009",
+          "arg2": "cumulative_return_difference",
+          "res": "-25.619430026442068"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-25.6%"
+        }
+      ],
+      "variables": {
+        "ups_cumulative_return_2009": 75.95,
+        "sp500_cumulative_return_2009": 102.11,
+        "cumulative_return_difference": -26.159999999999997,
+        "percentage_difference": -25.619430026442068
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_CE/2010/page_134.pdf-2",
+      "question": "what portion of the total shares subject to outstanding awards is under the 2009 global incentive plan?",
+      "expected_answer": "70.1%",
+      "predicted_answer": "2.11",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what portion of the total shares subject to outstanding awards is under the 2009 global incentive plan?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_shares_outstanding_awards",
+          "arg2": "table[total shares subject to outstanding awards]",
+          "res": "2530454"
+        },
+        {
+          "op": "extract",
+          "arg1": "shares_under_2009_gip",
+          "arg2": "text",
+          "res": "5350000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "portion_under_2009_gip",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "total_shares_outstanding_awards",
+          "arg2": "shares_under_2009_gip",
+          "res": "2.114245111746746"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "2.11"
+        }
+      ],
+      "variables": {
+        "total_shares_outstanding_awards": 2530454,
+        "shares_under_2009_gip": 5350000,
+        "portion_under_2009_gip": 2.114245111746746
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_JPM/2013/page_104.pdf-2",
+      "question": "what was the percentage increase in litigation reserves in 2012?",
+      "expected_answer": "15.6%",
+      "predicted_answer": "15.6%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage increase in litigation reserves in 2012?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "litigation_reserves_2012",
+          "arg2": "text",
+          "res": "3700000000"
+        },
+        {
+          "op": "extract",
+          "arg1": "litigation_reserves_2011",
+          "arg2": "text",
+          "res": "3200000000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "litigation_reserves_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "litigation_reserves_percentage_increase",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "litigation_reserves_2012",
+          "arg2": "litigation_reserves_2011",
+          "res": "500000000"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "litigation_reserves_2012",
+          "arg2": "litigation_reserves_2011",
+          "res": "15.625"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "15.6%"
+        }
+      ],
+      "variables": {
+        "litigation_reserves_2012": 3700000000,
+        "litigation_reserves_2011": 3200000000,
+        "litigation_reserves_change": 500000000,
+        "litigation_reserves_percentage_increase": 15.625
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_MAS/2012/page_92.pdf",
+      "question": "what was the percent of the change in the company 2019s warranty liability from 2011 to 2012",
+      "expected_answer": "15.7%",
+      "predicted_answer": "15.7%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percent of the change in the company 2019s warranty liability from 2011 to 2012",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "warranty_liability_2011",
+          "arg2": "table[row=1, column=2, warranty liability for 2011]",
+          "res": "102"
+        },
+        {
+          "op": "extract",
+          "arg1": "warranty_liability_2012",
+          "arg2": "table[row=2, column=2, warranty liability for 2012]",
+          "res": "118"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "warranty_liability_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "warranty_liability_percentage_change",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "warranty_liability_2011",
+          "arg2": "warranty_liability_2012",
+          "res": "16"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "warranty_liability_2011",
+          "arg2": "warranty_liability_2012",
+          "res": "15.686274509803921"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "15.7%"
+        }
+      ],
+      "variables": {
+        "warranty_liability_2011": 102,
+        "warranty_liability_2012": 118,
+        "warranty_liability_change": 16,
+        "warranty_liability_percentage_change": 15.686274509803921
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_MAS/2012/page_92.pdf",
+      "question": "what was the percentage change in the company's warranty liability from 2011 to 2012?",
+      "expected_answer": "16%",
+      "predicted_answer": "15.7%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage change in the company's warranty liability from 2011 to 2012?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "warranty_liability_2011",
+          "arg2": "table[row=1, column=2, warranty liability for 2011]",
+          "res": "102"
+        },
+        {
+          "op": "extract",
+          "arg1": "warranty_liability_2012",
+          "arg2": "table[row=2, column=2, warranty liability for 2012]",
+          "res": "118"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "warranty_liability_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "warranty_liability_percentage_change",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "warranty_liability_2011",
+          "arg2": "warranty_liability_2012",
+          "res": "16"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "warranty_liability_2011",
+          "arg2": "warranty_liability_2012",
+          "res": "15.686274509803921"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "15.7%"
+        }
+      ],
+      "variables": {
+        "warranty_liability_2011": 102,
+        "warranty_liability_2012": 118,
+        "warranty_liability_change": 16,
+        "warranty_liability_percentage_change": 15.686274509803921
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_HIG/2004/page_122.pdf-2",
+      "question": "what portion of total obligations are due within the next 3 years?",
+      "expected_answer": "22.99%",
+      "predicted_answer": "0.23",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what portion of total obligations are due within the next 3 years?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_obligations",
+          "arg2": "table[row=1, column=2, total contractual obligations]",
+          "res": "317105"
+        },
+        {
+          "op": "extract",
+          "arg1": "obligations_due_1_year",
+          "arg2": "table[row=1, column=3, obligations due within 1 year]",
+          "res": "27729"
+        },
+        {
+          "op": "extract",
+          "arg1": "obligations_due_2_3_years",
+          "arg2": "table[row=1, column=4, obligations due within 2-3 years]",
+          "res": "45161"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "obligations_due_3_years",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "portion_due_3_years",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "obligations_due_1_year",
+          "arg2": "obligations_due_2_3_years",
+          "res": "72890"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "total_obligations",
+          "arg2": "obligations_due_3_years",
+          "res": "0.22986077166869018"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "0.23"
+        }
+      ],
+      "variables": {
+        "total_obligations": 317105,
+        "obligations_due_1_year": 27729,
+        "obligations_due_2_3_years": 45161,
+        "obligations_due_3_years": 72890,
+        "portion_due_3_years": 0.22986077166869018
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_SLG/2013/page_133.pdf-4",
+      "question": "for the years ended december 31 , 2013 , 2012 and 2011 , what was the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans , restricted stock and stock options?\\\\n",
+      "expected_answer": "12",
+      "predicted_answer": "12,000.0",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "for the years ended december 31 , 2013 , 2012 and 2011 , what was the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans , restricted stock and stock options?\\\\n",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "capitalized_2013",
+          "arg2": "text",
+          "res": "4500000"
+        },
+        {
+          "op": "extract",
+          "arg1": "capitalized_2012",
+          "arg2": "text",
+          "res": "4100000"
+        },
+        {
+          "op": "extract",
+          "arg1": "capitalized_2011",
+          "arg2": "text",
+          "res": "3400000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_capitalized",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "capitalized_2013",
+          "arg2": "capitalized_2012",
+          "res": "12000000"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "12,000.0"
+        }
+      ],
+      "variables": {
+        "capitalized_2013": 4500000,
+        "capitalized_2012": 4100000,
+        "capitalized_2011": 3400000,
+        "total_capitalized": 12000000
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_AES/2016/page_98.pdf",
+      "question": "what was the change in millions between 2014 and 2015 of foreign currency transaction gains ( losses ) for aes corporation?",
+      "expected_answer": "3",
+      "predicted_answer": "96",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the change in millions between 2014 and 2015 of foreign currency transaction gains ( losses ) for aes corporation?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "foreign_currency_gain_2015",
+          "arg2": "text",
+          "res": "107"
+        },
+        {
+          "op": "extract",
+          "arg1": "foreign_currency_gain_2014",
+          "arg2": "text",
+          "res": "11"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "change_in_foreign_currency_gains",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "foreign_currency_gain_2015",
+          "arg2": "foreign_currency_gain_2014",
+          "res": "96"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "96"
+        }
+      ],
+      "variables": {
+        "foreign_currency_gain_2015": 107,
+        "foreign_currency_gain_2014": 11,
+        "change_in_foreign_currency_gains": 96
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_AES/2016/page_98.pdf",
+      "question": "what was the change in millions between 2015 and 2016 of foreign currency transaction gains ( losses ) for aes corporation?",
+      "expected_answer": "-19",
+      "predicted_answer": "-122",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the change in millions between 2015 and 2016 of foreign currency transaction gains ( losses ) for aes corporation?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "foreign_currency_gain_2016",
+          "arg2": "text",
+          "res": "-15"
+        },
+        {
+          "op": "extract",
+          "arg1": "foreign_currency_gain_2015",
+          "arg2": "text",
+          "res": "107"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "change_in_foreign_currency_gains",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "foreign_currency_gain_2016",
+          "arg2": "foreign_currency_gain_2015",
+          "res": "-122"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-122"
+        }
+      ],
+      "variables": {
+        "foreign_currency_gain_2016": -15,
+        "foreign_currency_gain_2015": 107,
+        "change_in_foreign_currency_gains": -122
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_ETR/2008/page_336.pdf-3",
+      "question": "what is the percent change in net revenue between 2007 and 2008?",
+      "expected_answer": "2.4%",
+      "predicted_answer": "2.4%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the percent change in net revenue between 2007 and 2008?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_revenue_2008",
+          "arg2": "text",
+          "res": "498.8"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_revenue_2007",
+          "arg2": "text",
+          "res": "486.9"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "net_revenue_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_net_revenue",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "net_revenue_2008",
+          "arg2": "net_revenue_2007",
+          "res": "11.900000000000034"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "net_revenue_2008",
+          "arg2": "net_revenue_2007",
+          "res": "2.4440336824810096"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "2.4%"
+        }
+      ],
+      "variables": {
+        "net_revenue_2008": 498.8,
+        "net_revenue_2007": 486.9,
+        "net_revenue_change": 11.900000000000034,
+        "percentage_change_net_revenue": 2.4440336824810096
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_BKR/2017/page_105.pdf-2",
+      "question": "what portion of the authorized shares of class b common stock is outstanding as of december 31 , 2017?",
+      "expected_answer": "56.6%",
+      "predicted_answer": "0.57",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what portion of the authorized shares of class b common stock is outstanding as of december 31 , 2017?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "authorized_class_b_shares",
+          "arg2": "text",
+          "res": "1250000000"
+        },
+        {
+          "op": "extract",
+          "arg1": "outstanding_class_b_shares",
+          "arg2": "text",
+          "res": "707000000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "portion_outstanding",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "authorized_class_b_shares",
+          "arg2": "outstanding_class_b_shares",
+          "res": "0.5656"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "0.57"
+        }
+      ],
+      "variables": {
+        "authorized_class_b_shares": 1250000000,
+        "outstanding_class_b_shares": 707000000,
+        "portion_outstanding": 0.5656
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_AES/2011/page_230.pdf",
+      "question": "as of december 31 , 2011 , what is the total in billions available under the committed credit facilities?",
+      "expected_answer": "2.6",
+      "predicted_answer": "2.6",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "as of december 31 , 2011 , what is the total in billions available under the committed credit facilities?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "committed_credit_facilities_construction",
+          "arg2": "text",
+          "res": "1400000000"
+        },
+        {
+          "op": "extract",
+          "arg1": "committed_credit_facilities_working_capital",
+          "arg2": "text",
+          "res": "1200000000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_committed_credit_facilities",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "committed_credit_facilities_construction",
+          "arg2": "committed_credit_facilities_working_capital",
+          "res": "2600000000"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "2.6"
+        }
+      ],
+      "variables": {
+        "committed_credit_facilities_construction": 1400000000,
+        "committed_credit_facilities_working_capital": 1200000000,
+        "total_committed_credit_facilities": 2600000000
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_AES/2011/page_230.pdf",
+      "question": "what percentage of total non-recourse debt as of december 31 , 2011 is due in 2014?",
+      "expected_answer": "11%",
+      "predicted_answer": "241.1%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what percentage of total non-recourse debt as of december 31 , 2011 is due in 2014?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_non_recourse_debt_2011",
+          "arg2": "text",
+          "res": "704"
+        },
+        {
+          "op": "extract",
+          "arg1": "debt_due_2014",
+          "arg2": "table[row=4, column=2, non-recourse debt due in 2014]",
+          "res": "1697"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_due_2014",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "total_non_recourse_debt_2011",
+          "arg2": "debt_due_2014",
+          "res": "241.05113636363637"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "241.1%"
+        }
+      ],
+      "variables": {
+        "total_non_recourse_debt_2011": 704,
+        "debt_due_2014": 1697,
+        "percentage_due_2014": 241.05113636363637
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_JPM/2016/page_73.pdf-4",
+      "question": "what was the 5 year return of the kbw bank index?",
+      "expected_answer": "158.82%",
+      "predicted_answer": "158.8%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the 5 year return of the kbw bank index?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "kbw_index_2011",
+          "arg2": "table[row=1, column=2, KBW Bank Index value for 2011]",
+          "res": "100.0"
+        },
+        {
+          "op": "extract",
+          "arg1": "kbw_index_2016",
+          "arg2": "table[row=1, column=7, KBW Bank Index value for 2016]",
+          "res": "258.82"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "absolute_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "five_year_return",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "kbw_index_2011",
+          "arg2": "kbw_index_2016",
+          "res": "158.82"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "kbw_index_2011",
+          "arg2": "kbw_index_2016",
+          "res": "158.82"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "158.8%"
+        }
+      ],
+      "variables": {
+        "kbw_index_2011": 100.0,
+        "kbw_index_2016": 258.82,
+        "absolute_change": 158.82,
+        "five_year_return": 158.82
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_ADBE/2018/page_66.pdf",
+      "question": "what is the average yearly amortization expense related to trademarks?",
+      "expected_answer": "11.1%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the average yearly amortization expense related to trademarks?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "trademark_amortization_2018",
+          "arg2": "table[row=1, column=2, amortization expense for trademarks in 2018]",
+          "res": "None"
+        },
+        {
+          "op": "extract",
+          "arg1": "trademark_amortization_2017",
+          "arg2": "table[row=2, column=2, amortization expense for trademarks in 2017]",
+          "res": "None"
+        },
+        {
+          "op": "extract",
+          "arg1": "trademark_amortization_2016",
+          "arg2": "table[row=3, column=2, amortization expense for trademarks in 2016]",
+          "res": "None"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        }
+      ],
+      "variables": {
+        "trademark_amortization_2018": null,
+        "trademark_amortization_2017": null,
+        "trademark_amortization_2016": null
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_ADBE/2018/page_66.pdf",
+      "question": "what is the average yearly amortization expense related to purchased technology?",
+      "expected_answer": "16.7%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the average yearly amortization expense related to purchased technology?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_amortization_expense",
+          "arg2": "text",
+          "res": "None"
+        },
+        {
+          "op": "extract",
+          "arg1": "useful_life_years",
+          "arg2": "text",
+          "res": "6"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        }
+      ],
+      "variables": {
+        "total_amortization_expense": null,
+        "useful_life_years": 6
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_PNC/2014/page_99.pdf",
+      "question": "in 2014 what was the percent of the change associated with total net charge-offs",
+      "expected_answer": "14.7%",
+      "predicted_answer": "-50.7%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "in 2014 what was the percent of the change associated with total net charge-offs",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_charge_offs_2014",
+          "arg2": "table[row=2, column=3, net charge-offs for 2014]",
+          "res": "531"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_charge_offs_2013",
+          "arg2": "table[row=3, column=3, net charge-offs for 2013]",
+          "res": "1077"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "net_charge_offs_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "net_charge_offs_percentage_change",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "net_charge_offs_2014",
+          "arg2": "net_charge_offs_2013",
+          "res": "-546"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "net_charge_offs_2014",
+          "arg2": "net_charge_offs_2013",
+          "res": "-50.69637883008357"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-50.7%"
+        }
+      ],
+      "variables": {
+        "net_charge_offs_2014": 531,
+        "net_charge_offs_2013": 1077,
+        "net_charge_offs_change": -546,
+        "net_charge_offs_percentage_change": -50.69637883008357
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_PNC/2014/page_99.pdf",
+      "question": "what was the ratio of the provision for credit losses in 2014 compared 2013 .",
+      "expected_answer": ".43",
+      "predicted_answer": "0.42",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the ratio of the provision for credit losses in 2014 compared 2013 .",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "provision_2014",
+          "arg2": "text",
+          "res": "273"
+        },
+        {
+          "op": "extract",
+          "arg1": "provision_2013",
+          "arg2": "text",
+          "res": "643"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "provision_ratio",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "provision_2014",
+          "arg2": "provision_2013",
+          "res": "0.42457231726283046"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "0.42"
+        }
+      ],
+      "variables": {
+        "provision_2014": 273,
+        "provision_2013": 643,
+        "provision_ratio": 0.42457231726283046
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_BLK/2017/page_35.pdf-4",
+      "question": "what is the percentage change in the balance of asset allocation from 2016 to 2017?",
+      "expected_answer": "11.2%",
+      "predicted_answer": "11.2%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the percentage change in the balance of asset allocation from 2016 to 2017?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "asset_allocation_2016",
+          "arg2": "text",
+          "res": "176675"
+        },
+        {
+          "op": "extract",
+          "arg1": "asset_allocation_2017",
+          "arg2": "text",
+          "res": "196545"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "change_in_balance",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "asset_allocation_2016",
+          "arg2": "asset_allocation_2017",
+          "res": "19870"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "asset_allocation_2016",
+          "arg2": "asset_allocation_2017",
+          "res": "11.246639309466534"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "11.2%"
+        }
+      ],
+      "variables": {
+        "asset_allocation_2016": 176675,
+        "asset_allocation_2017": 196545,
+        "change_in_balance": 19870,
+        "percentage_change": 11.246639309466534
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_HII/2015/page_120.pdf-4",
+      "question": "between 2015 and 2013 what was the average compensation expense related to the issuing of the stock award in millions",
+      "expected_answer": "40.3",
+      "predicted_answer": "40.3",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "between 2015 and 2013 what was the average compensation expense related to the issuing of the stock award in millions",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "compensation_2015",
+          "arg2": "text",
+          "res": "43"
+        },
+        {
+          "op": "extract",
+          "arg1": "compensation_2014",
+          "arg2": "text",
+          "res": "34"
+        },
+        {
+          "op": "extract",
+          "arg1": "compensation_2013",
+          "arg2": "text",
+          "res": "44"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_compensation",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "average_compensation",
+          "arg2": "range_check_for_division",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "compensation_2015",
+          "arg2": "compensation_2014",
+          "res": "121"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "total_compensation",
+          "arg2": "unknown",
+          "res": "40.333333333333336"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "40.3"
+        }
+      ],
+      "variables": {
+        "compensation_2015": 43,
+        "compensation_2014": 34,
+        "compensation_2013": 44,
+        "total_compensation": 121,
+        "average_compensation": 40.333333333333336
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_AMT/2002/page_104.pdf-2",
+      "question": "what is the total expected payments for principal of long- term debt , including capital leases in the next 36 months?",
+      "expected_answer": "594840",
+      "predicted_answer": "594,840",
+      "exact_match": true,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the total expected payments for principal of long- term debt , including capital leases in the next 36 months?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "principal_payments_2003",
+          "arg2": "table[row=1, column=2, principal payments for 2003]",
+          "res": "268496"
+        },
+        {
+          "op": "extract",
+          "arg1": "principal_payments_2004",
+          "arg2": "table[row=2, column=2, principal payments for 2004]",
+          "res": "131262"
+        },
+        {
+          "op": "extract",
+          "arg1": "principal_payments_2005",
+          "arg2": "table[row=3, column=2, principal payments for 2005]",
+          "res": "195082"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_principal_payments_36_months",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "principal_payments_2003",
+          "arg2": "principal_payments_2004",
+          "res": "594840"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "594,840"
+        }
+      ],
+      "variables": {
+        "principal_payments_2003": 268496,
+        "principal_payments_2004": 131262,
+        "principal_payments_2005": 195082,
+        "total_principal_payments_36_months": 594840
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_VRTX/2005/page_103.pdf-1",
+      "question": "what is the percent change in net loss on disposal of assets between 2004 and 2005?",
+      "expected_answer": "700%",
+      "predicted_answer": "700.0%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the percent change in net loss on disposal of assets between 2004 and 2005?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_loss_2005",
+          "arg2": "text",
+          "res": "344000"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_loss_2004",
+          "arg2": "text",
+          "res": "43000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "net_loss_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_net_loss",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "net_loss_2005",
+          "arg2": "net_loss_2004",
+          "res": "301000"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "net_loss_2005",
+          "arg2": "net_loss_2004",
+          "res": "700.0"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "700.0%"
+        }
+      ],
+      "variables": {
+        "net_loss_2005": 344000,
+        "net_loss_2004": 43000,
+        "net_loss_change": 301000,
+        "percentage_change_net_loss": 700.0
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_STT/2013/page_54.pdf-4",
+      "question": "how much higher are the returns of the s&p 500 in the same period ( 2008-2013 ) ? as a percentage .",
+      "expected_answer": "30%",
+      "predicted_answer": "68.0%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "how much higher are the returns of the s&p 500 in the same period ( 2008-2013 ) ? as a percentage .",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "sp500_return_2013",
+          "arg2": "table[row=5, column=3, S&P 500 cumulative return in 2013]",
+          "res": "168"
+        },
+        {
+          "op": "extract",
+          "arg1": "sp500_return_2008",
+          "arg2": "table[row=5, column=2, S&P 500 cumulative return in 2008]",
+          "res": "100"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "sp500_return_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "sp500_percentage_increase",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "sp500_return_2013",
+          "arg2": "sp500_return_2008",
+          "res": "68"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "sp500_return_2013",
+          "arg2": "sp500_return_2008",
+          "res": "68.0"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "68.0%"
+        }
+      ],
+      "variables": {
+        "sp500_return_2013": 168,
+        "sp500_return_2008": 100,
+        "sp500_return_change": 68,
+        "sp500_percentage_increase": 68.0
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_GS/2014/page_62.pdf-2",
+      "question": "what is the percentage change in standardized rwas in 2014?",
+      "expected_answer": "-1.2%",
+      "predicted_answer": "1.2%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the percentage change in standardized rwas in 2014?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "standardized_rwas_2014",
+          "arg2": "table[row=2, column=3, standardized RWAs for 2014]",
+          "res": "635092"
+        },
+        {
+          "op": "extract",
+          "arg1": "standardized_rwas_2013",
+          "arg2": "table[row=2, column=2, standardized RWAs for 2013]",
+          "res": "627444"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "rwas_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_rwas",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "standardized_rwas_2014",
+          "arg2": "standardized_rwas_2013",
+          "res": "7648"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "standardized_rwas_2014",
+          "arg2": "standardized_rwas_2013",
+          "res": "1.2189135604133596"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "1.2%"
+        }
+      ],
+      "variables": {
+        "standardized_rwas_2014": 635092,
+        "standardized_rwas_2013": 627444,
+        "rwas_change": 7648,
+        "percentage_change_rwas": 1.2189135604133596
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_GPN/2018/page_85.pdf",
+      "question": "how much did the annual payments increase from 2019 to 2024 and beyond?",
+      "expected_answer": "350824 thousand",
+      "predicted_answer": "350,824",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "how much did the annual payments increase from 2019 to 2024 and beyond?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "payment_2019",
+          "arg2": "table[row=1, column=2, annual payment for 2019]",
+          "res": "124176"
+        },
+        {
+          "op": "extract",
+          "arg1": "payment_2024",
+          "arg2": "table[row=6, column=2, annual payment for 2024]",
+          "res": "475000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "payment_increase",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "payment_2019",
+          "arg2": "payment_2024",
+          "res": "350824"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "350,824"
+        }
+      ],
+      "variables": {
+        "payment_2019": 124176,
+        "payment_2024": 475000,
+        "payment_increase": 350824
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_GPN/2018/page_85.pdf",
+      "question": "what is the yearly interest expense incurred from term a loan , ( in millions ) ?",
+      "expected_answer": "60.3",
+      "predicted_answer": "60.3",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the yearly interest expense incurred from term a loan , ( in millions ) ?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "term_a_loan_amount",
+          "arg2": "text",
+          "res": "1500000000"
+        },
+        {
+          "op": "extract",
+          "arg1": "term_a_loan_interest_rate",
+          "arg2": "text",
+          "res": "4.02"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "term_a_loan_amount_millions",
+          "arg2": "range_check_for_multiplication",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "yearly_interest_expense",
+          "arg2": "range_check_for_multiplication",
+          "res": "valid_result"
+        },
+        {
+          "op": "multiply2-1",
+          "arg1": "unknown",
+          "arg2": "unknown",
+          "res": "1500.0"
+        },
+        {
+          "op": "multiply2-1",
+          "arg1": "term_a_loan_amount",
+          "arg2": "term_a_loan_interest_rate",
+          "res": "60.29999999999999"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "60.3"
+        }
+      ],
+      "variables": {
+        "term_a_loan_amount": 1500000000,
+        "term_a_loan_interest_rate": 4.02,
+        "term_a_loan_amount_millions": 1500.0,
+        "yearly_interest_expense": 60.29999999999999
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_EW/2016/page_36.pdf",
+      "question": "what was the percentage cumulative total return for edwards lifesciences for the five years ended 2016?",
+      "expected_answer": "165%",
+      "predicted_answer": "165.1%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage cumulative total return for edwards lifesciences for the five years ended 2016?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "initial_investment",
+          "arg2": "text",
+          "res": "100"
+        },
+        {
+          "op": "extract",
+          "arg1": "final_value_2016",
+          "arg2": "table[row=1, column=2, final value of investment at December 31, 2016 for Edwards Lifesciences]",
+          "res": "265.06"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "cumulative_total_return",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "initial_investment",
+          "arg2": "final_value_2016",
+          "res": "165.06"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "165.1%"
+        }
+      ],
+      "variables": {
+        "initial_investment": 100,
+        "final_value_2016": 265.06,
+        "cumulative_total_return": 165.06
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_EW/2016/page_36.pdf",
+      "question": "what was the difference in cumulative percentage returns between edwards lifesciences and the s&p 500 for the five years ended 2016?",
+      "expected_answer": "67%",
+      "predicted_answer": "66.9%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the difference in cumulative percentage returns between edwards lifesciences and the s&p 500 for the five years ended 2016?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "cumulative_return_edwards",
+          "arg2": "table[row=6, column=2, cumulative return for Edwards Lifesciences for 2016]",
+          "res": "265.06"
+        },
+        {
+          "op": "extract",
+          "arg1": "cumulative_return_sp500",
+          "arg2": "table[row=6, column=3, cumulative return for S&P 500 for 2016]",
+          "res": "198.18"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "difference_in_returns",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "cumulative_return_edwards",
+          "arg2": "cumulative_return_sp500",
+          "res": "66.88"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "66.9%"
+        }
+      ],
+      "variables": {
+        "cumulative_return_edwards": 265.06,
+        "cumulative_return_sp500": 198.18,
+        "difference_in_returns": 66.88
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_ADI/2009/page_90.pdf-3",
+      "question": "what percentage did the balance increase from 2007 to 2009?",
+      "expected_answer": "83.6%",
+      "predicted_answer": "83.6%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what percentage did the balance increase from 2007 to 2009?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "balance_2007",
+          "arg2": "table[row=1, column=2, balance in row for 2007]",
+          "res": "9889"
+        },
+        {
+          "op": "extract",
+          "arg1": "balance_2009",
+          "arg2": "table[row=3, column=2, balance in row for 2009]",
+          "res": "18161"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "balance_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_increase",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "balance_2007",
+          "arg2": "balance_2009",
+          "res": "8272"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "balance_2007",
+          "arg2": "balance_2009",
+          "res": "83.64849833147943"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "83.6%"
+        }
+      ],
+      "variables": {
+        "balance_2007": 9889,
+        "balance_2009": 18161,
+        "balance_change": 8272,
+        "percentage_increase": 83.64849833147943
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_AON/2007/page_185.pdf-4",
+      "question": "what is the percentual decrease observed in the future minimum rental payments during 2008 and 2009?",
+      "expected_answer": "13.25%",
+      "predicted_answer": "13.2%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the percentual decrease observed in the future minimum rental payments during 2008 and 2009?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "rental_payments_2008",
+          "arg2": "table[row=1, column=2, rental payments for 2008]",
+          "res": "317"
+        },
+        {
+          "op": "extract",
+          "arg1": "rental_payments_2009",
+          "arg2": "table[row=2, column=2, rental payments for 2009]",
+          "res": "275"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "rental_payments_decrease",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_decrease",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "rental_payments_2008",
+          "arg2": "rental_payments_2009",
+          "res": "42"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "rental_payments_2008",
+          "arg2": "rental_payments_2009",
+          "res": "13.249211356466878"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "13.2%"
+        }
+      ],
+      "variables": {
+        "rental_payments_2008": 317,
+        "rental_payments_2009": 275,
+        "rental_payments_decrease": 42,
+        "percentage_decrease": 13.249211356466878
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_ZBH/2002/page_46.pdf-3",
+      "question": "what was the percentage change of total debt from 2001 to 2002?",
+      "expected_answer": "-57%",
+      "predicted_answer": "-56.9%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage change of total debt from 2001 to 2002?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_debt_2002",
+          "arg2": "table[row=1, column=3, total debt in row for 2002]",
+          "res": "156.7"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_debt_2001",
+          "arg2": "table[row=1, column=4, total debt in row for 2001]",
+          "res": "363.9"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "debt_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_debt",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "total_debt_2002",
+          "arg2": "total_debt_2001",
+          "res": "-207.2"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "total_debt_2002",
+          "arg2": "total_debt_2001",
+          "res": "-56.938719428414394"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-56.9%"
+        }
+      ],
+      "variables": {
+        "total_debt_2002": 156.7,
+        "total_debt_2001": 363.9,
+        "debt_change": -207.2,
+        "percentage_change_debt": -56.938719428414394
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_HII/2015/page_120.pdf-1",
+      "question": "what is the total revenue for the fiscal year of 2015?",
+      "expected_answer": "7020",
+      "predicted_answer": "7,020",
+      "exact_match": true,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the total revenue for the fiscal year of 2015?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_q1_2015",
+          "arg2": "table[row=1, column=2, revenue for Q1 2015]",
+          "res": "1570"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_q2_2015",
+          "arg2": "table[row=2, column=2, revenue for Q2 2015]",
+          "res": "1745"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_q3_2015",
+          "arg2": "table[row=3, column=2, revenue for Q3 2015]",
+          "res": "1800"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_q4_2015",
+          "arg2": "table[row=4, column=2, revenue for Q4 2015]",
+          "res": "1905"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_revenue_2015",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "revenue_q1_2015",
+          "arg2": "revenue_q2_2015",
+          "res": "7020"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "7,020"
+        }
+      ],
+      "variables": {
+        "revenue_q1_2015": 1570,
+        "revenue_q2_2015": 1745,
+        "revenue_q3_2015": 1800,
+        "revenue_q4_2015": 1905,
+        "total_revenue_2015": 7020
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_AES/2002/page_117.pdf-2",
+      "question": "what was the percentage change in revenues for investments in 50% ( 50 % ) or less owned investments accounted for using the equity method between 2000 and 2001?",
+      "expected_answer": "-2%",
+      "predicted_answer": "-1.5%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage change in revenues for investments in 50% ( 50 % ) or less owned investments accounted for using the equity method between 2000 and 2001?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_2001",
+          "arg2": "table[row=2, column=2, revenue in row for 2001]",
+          "res": "6147"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_2000",
+          "arg2": "table[row=3, column=2, revenue in row for 2000]",
+          "res": "6241"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "revenue_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_growth",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "revenue_2001",
+          "arg2": "revenue_2000",
+          "res": "-94"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "revenue_2001",
+          "arg2": "revenue_2000",
+          "res": "-1.506168883191796"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-1.5%"
+        }
+      ],
+      "variables": {
+        "revenue_2001": 6147,
+        "revenue_2000": 6241,
+        "revenue_change": -94,
+        "percentage_growth": -1.506168883191796
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_ALXN/2016/page_89.pdf-1",
+      "question": "how many square feet are owned by the company?",
+      "expected_answer": "377000",
+      "predicted_answer": "674,000",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "how many square feet are owned by the company?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "new_haven_square_feet",
+          "arg2": "table[row=1, column=3, square feet for New Haven, Connecticut]",
+          "res": "514000"
+        },
+        {
+          "op": "extract",
+          "arg1": "dublin_square_feet",
+          "arg2": "table[row=2, column=3, square feet for Dublin, Ireland]",
+          "res": "160000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_square_feet_owned",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "new_haven_square_feet",
+          "arg2": "dublin_square_feet",
+          "res": "674000"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "674,000"
+        }
+      ],
+      "variables": {
+        "new_haven_square_feet": 514000,
+        "dublin_square_feet": 160000,
+        "total_square_feet_owned": 674000
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_AON/2018/page_41.pdf-3",
+      "question": "considering the years 2017 and 2018 , what is the percentual increase observed in capital expenditures used for continuing operations?",
+      "expected_answer": "31.14%",
+      "predicted_answer": "31.1%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "considering the years 2017 and 2018 , what is the percentual increase observed in capital expenditures used for continuing operations?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "capex_2018",
+          "arg2": "table[row=2, column=3, capital expenditures for 2018]",
+          "res": "240"
+        },
+        {
+          "op": "extract",
+          "arg1": "capex_2017",
+          "arg2": "table[row=3, column=3, capital expenditures for 2017]",
+          "res": "183"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "capex_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_increase",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "capex_2018",
+          "arg2": "capex_2017",
+          "res": "57"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "capex_2018",
+          "arg2": "capex_2017",
+          "res": "31.147540983606557"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "31.1%"
+        }
+      ],
+      "variables": {
+        "capex_2018": 240,
+        "capex_2017": 183,
+        "capex_change": 57,
+        "percentage_increase": 31.147540983606557
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_RSG/2012/page_145.pdf-1",
+      "question": "what was the percentage decline in the total restricted cash and marketable securities from 2011 to 2012",
+      "expected_answer": "-13.4%",
+      "predicted_answer": "13.4%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage decline in the total restricted cash and marketable securities from 2011 to 2012",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "restricted_cash_2011",
+          "arg2": "table[row=1, column=2, restricted cash and marketable securities for 2011]",
+          "res": "189.6"
+        },
+        {
+          "op": "extract",
+          "arg1": "restricted_cash_2012",
+          "arg2": "table[row=1, column=3, restricted cash and marketable securities for 2012]",
+          "res": "164.2"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "decline_amount",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_decline",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "restricted_cash_2011",
+          "arg2": "restricted_cash_2012",
+          "res": "25.400000000000006"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "restricted_cash_2011",
+          "arg2": "restricted_cash_2012",
+          "res": "13.396624472573842"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "13.4%"
+        }
+      ],
+      "variables": {
+        "restricted_cash_2011": 189.6,
+        "restricted_cash_2012": 164.2,
+        "decline_amount": 25.400000000000006,
+        "percentage_decline": 13.396624472573842
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_CB/2008/page_144.pdf",
+      "question": "what was the ratio of the pre-tax impact on equity of hypothetical 10 percent strengthening of the u.s . dollar in 2007 to 2008",
+      "expected_answer": "1.79",
+      "predicted_answer": "0.56",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the ratio of the pre-tax impact on equity of hypothetical 10 percent strengthening of the u.s . dollar in 2007 to 2008",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "impact_2007",
+          "arg2": "table[row=1, column=2, pre-tax impact on equity for 2007]",
+          "res": "150"
+        },
+        {
+          "op": "extract",
+          "arg1": "impact_2008",
+          "arg2": "table[row=2, column=2, pre-tax impact on equity for 2008]",
+          "res": "84"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "impact_ratio",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "impact_2007",
+          "arg2": "impact_2008",
+          "res": "0.56"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "0.56"
+        }
+      ],
+      "variables": {
+        "impact_2007": 150,
+        "impact_2008": 84,
+        "impact_ratio": 0.56
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_CB/2008/page_144.pdf",
+      "question": "what is percentage change in fair value of net assets denominated in foreign currencies from 2007 to 2008?",
+      "expected_answer": "-31.7%",
+      "predicted_answer": "-31.7%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is percentage change in fair value of net assets denominated in foreign currencies from 2007 to 2008?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_assets_2008",
+          "arg2": "table[row=2, column=3, net assets denominated in foreign currencies for 2008]",
+          "res": "1127"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_assets_2007",
+          "arg2": "table[row=2, column=2, net assets denominated in foreign currencies for 2007]",
+          "res": "1651"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "net_assets_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_net_assets",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "net_assets_2008",
+          "arg2": "net_assets_2007",
+          "res": "-524"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "net_assets_2008",
+          "arg2": "net_assets_2007",
+          "res": "-31.738340399757725"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-31.7%"
+        }
+      ],
+      "variables": {
+        "net_assets_2008": 1127,
+        "net_assets_2007": 1651,
+        "net_assets_change": -524,
+        "percentage_change_net_assets": -31.738340399757725
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_STT/2011/page_94.pdf-3",
+      "question": "what was the percent change in the value of commercial paper outstanding between 2010 and 2011?",
+      "expected_answer": "18%",
+      "predicted_answer": "-15.0%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percent change in the value of commercial paper outstanding between 2010 and 2011?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "commercial_paper_2011",
+          "arg2": "text",
+          "res": "2380000000"
+        },
+        {
+          "op": "extract",
+          "arg1": "commercial_paper_2010",
+          "arg2": "text",
+          "res": "2800000000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "change_in_commercial_paper",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_commercial_paper",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "commercial_paper_2011",
+          "arg2": "commercial_paper_2010",
+          "res": "-420000000"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "commercial_paper_2011",
+          "arg2": "commercial_paper_2010",
+          "res": "-15.0"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-15.0%"
+        }
+      ],
+      "variables": {
+        "commercial_paper_2011": 2380000000,
+        "commercial_paper_2010": 2800000000,
+        "change_in_commercial_paper": -420000000,
+        "percentage_change_commercial_paper": -15.0
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_L/2016/page_62.pdf-1",
+      "question": "what was the growth rate of the s&p 500 index from 2011 to 2016",
+      "expected_answer": "98.2%",
+      "predicted_answer": "28.2%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the growth rate of the s&p 500 index from 2011 to 2016",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "initial_value",
+          "arg2": "text",
+          "res": "100.0"
+        },
+        {
+          "op": "extract",
+          "arg1": "final_value",
+          "arg2": "text",
+          "res": "128.19"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "investment_growth",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "growth_rate_percentage",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "initial_value",
+          "arg2": "final_value",
+          "res": "28.189999999999998"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "initial_value",
+          "arg2": "final_value",
+          "res": "28.189999999999998"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "28.2%"
+        }
+      ],
+      "variables": {
+        "initial_value": 100.0,
+        "final_value": 128.19,
+        "investment_growth": 28.189999999999998,
+        "growth_rate_percentage": 28.189999999999998
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_JPM/2009/page_206.pdf-3",
+      "question": "what was the firm's average sum of contractual principal , interest and fees in 2008 and 2009?",
+      "expected_answer": "$ 110774.5 million",
+      "predicted_answer": "110,774.5",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the firm's average sum of contractual principal , interest and fees in 2008 and 2009?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "contractual_principal_interest_fees_2008",
+          "arg2": "table[row=2, column=3, sum of contractual principal, interest and fees for 2008]",
+          "res": "118180"
+        },
+        {
+          "op": "extract",
+          "arg1": "contractual_principal_interest_fees_2009",
+          "arg2": "table[row=3, column=3, sum of contractual principal, interest and fees for 2009]",
+          "res": "103369"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_sum_2008_2009",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "average_sum_2008_2009",
+          "arg2": "range_check_for_division",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "contractual_principal_interest_fees_2008",
+          "arg2": "contractual_principal_interest_fees_2009",
+          "res": "221549"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "total_sum_2008_2009",
+          "arg2": "unknown",
+          "res": "110774.5"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "110,774.5"
+        }
+      ],
+      "variables": {
+        "contractual_principal_interest_fees_2008": 118180,
+        "contractual_principal_interest_fees_2009": 103369,
+        "total_sum_2008_2009": 221549,
+        "average_sum_2008_2009": 110774.5
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_GS/2013/page_47.pdf-2",
+      "question": "what is the percentage change in staff number in 2013?",
+      "expected_answer": "1.5%",
+      "predicted_answer": "1.5%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the percentage change in staff number in 2013?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "staff_2013",
+          "arg2": "table[row=2, column=2, staff number in row for 2013]",
+          "res": "32900"
+        },
+        {
+          "op": "extract",
+          "arg1": "staff_2012",
+          "arg2": "table[row=3, column=2, staff number in row for 2012]",
+          "res": "32400"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "staff_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_staff",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "staff_2013",
+          "arg2": "staff_2012",
+          "res": "500"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "staff_2013",
+          "arg2": "staff_2012",
+          "res": "1.5432098765432098"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "1.5%"
+        }
+      ],
+      "variables": {
+        "staff_2013": 32900,
+        "staff_2012": 32400,
+        "staff_change": 500,
+        "percentage_change_staff": 1.5432098765432098
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_WRK/2019/page_49.pdf-1",
+      "question": "in 2019 what was the net change in cash in millions",
+      "expected_answer": "-489.2",
+      "predicted_answer": "-485.2",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "in 2019 what was the net change in cash in millions",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "cash_equivalents_2019",
+          "arg2": "text",
+          "res": "151600000"
+        },
+        {
+          "op": "extract",
+          "arg1": "cash_equivalents_2018",
+          "arg2": "text",
+          "res": "636800000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "net_change_in_cash",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "cash_equivalents_2019",
+          "arg2": "cash_equivalents_2018",
+          "res": "-485200000"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-485.2"
+        }
+      ],
+      "variables": {
+        "cash_equivalents_2019": 151600000,
+        "cash_equivalents_2018": 636800000,
+        "net_change_in_cash": -485200000
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_LMT/2014/page_31.pdf-2",
+      "question": "what is the growth rate in the average price of the purchased shares from october to november 2014?",
+      "expected_answer": "6.1%",
+      "predicted_answer": "6.1%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the growth rate in the average price of the purchased shares from october to november 2014?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "average_price_october",
+          "arg2": "table[row=1, column=2, average price paid per share in October 2014]",
+          "res": "176.96"
+        },
+        {
+          "op": "extract",
+          "arg1": "average_price_november",
+          "arg2": "table[row=2, column=2, average price paid per share in November 2014]",
+          "res": "187.74"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "price_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_growth",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "average_price_october",
+          "arg2": "average_price_november",
+          "res": "10.780000000000001"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "average_price_october",
+          "arg2": "average_price_november",
+          "res": "6.091772151898735"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "6.1%"
+        }
+      ],
+      "variables": {
+        "average_price_october": 176.96,
+        "average_price_november": 187.74,
+        "price_change": 10.780000000000001,
+        "percentage_growth": 6.091772151898735
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_NCLH/2017/page_57.pdf",
+      "question": "what will be the balance of long-term debt after 1 year assuming that everything is paid as planned and no additional debt is raised?",
+      "expected_answer": "5805209",
+      "predicted_answer": "-629.1",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what will be the balance of long-term debt after 1 year assuming that everything is paid as planned and no additional debt is raised?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "long_term_debt_initial",
+          "arg2": "table[row=1, column=2, long-term debt for less than 1 year]",
+          "res": "619373"
+        },
+        {
+          "op": "extract",
+          "arg1": "long_term_debt_1_3_years",
+          "arg2": "table[row=1, column=3, long-term debt for 1-3 years]",
+          "res": "1248463"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "long_term_debt_after_1_year",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "long_term_debt_initial",
+          "arg2": "long_term_debt_1_3_years",
+          "res": "-629090"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-629.1"
+        }
+      ],
+      "variables": {
+        "long_term_debt_initial": 619373,
+        "long_term_debt_1_3_years": 1248463,
+        "long_term_debt_after_1_year": -629090
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_NCLH/2017/page_57.pdf",
+      "question": "what portion of the expected payments within the next 12 months is allocated to the repayment of long-term debt?",
+      "expected_answer": "31.7%",
+      "predicted_answer": "0.04",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what portion of the expected payments within the next 12 months is allocated to the repayment of long-term debt?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "long_term_debt_less_than_1_year",
+          "arg2": "table[row=2, column=2, long-term debt payment due in less than 1 year]",
+          "res": "619373"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_payments_less_than_1_year",
+          "arg2": "table[sum of all payments due in less than 1 year]",
+          "res": "1954928"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_payments_less_than_1_year",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "debt_payment_ratio",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "unknown",
+          "arg2": "unknown",
+          "res": "13949545"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "long_term_debt_less_than_1_year",
+          "arg2": "total_payments_less_than_1_year",
+          "res": "0.044400946410796914"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "0.04"
+        }
+      ],
+      "variables": {
+        "long_term_debt_less_than_1_year": 619373,
+        "total_payments_less_than_1_year": 13949545,
+        "debt_payment_ratio": 0.044400946410796914
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_WRK/2018/page_53.pdf",
+      "question": "in 2018 , what percent of the net cash from operations is retained after financing and investing activities?",
+      "expected_answer": "15.16%",
+      "predicted_answer": "184.8%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "in 2018 , what percent of the net cash from operations is retained after financing and investing activities?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_cash_from_operations_2018",
+          "arg2": "text",
+          "res": "2420.9"
+        },
+        {
+          "op": "extract",
+          "arg1": "cash_used_in_investing_activities_2018",
+          "arg2": "text",
+          "res": "-1298.9"
+        },
+        {
+          "op": "extract",
+          "arg1": "cash_used_in_financing_activities_2018",
+          "arg2": "text",
+          "res": "-755.1"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_3",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_cash_used_in_investing_and_financing",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_3",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "net_cash_retained",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "3_of_3",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_retained",
+          "arg2": "range_check_for_division",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "cash_used_in_investing_activities_2018",
+          "arg2": "cash_used_in_financing_activities_2018",
+          "res": "-2054.0"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "net_cash_from_operations_2018",
+          "arg2": "total_cash_used_in_investing_and_financing",
+          "res": "4474.9"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "net_cash_from_operations_2018",
+          "arg2": "net_cash_retained",
+          "res": "184.8444793258705"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "184.8%"
+        }
+      ],
+      "variables": {
+        "net_cash_from_operations_2018": 2420.9,
+        "cash_used_in_investing_activities_2018": -1298.9,
+        "cash_used_in_financing_activities_2018": -755.1,
+        "total_cash_used_in_investing_and_financing": -2054.0,
+        "net_cash_retained": 4474.9,
+        "percentage_retained": 184.8444793258705
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_WRK/2018/page_53.pdf",
+      "question": "as of september 30 , 2018 , what was the percent of the total debt that was current .",
+      "expected_answer": "11.55%",
+      "predicted_answer": "11.5%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "as of september 30 , 2018 , what was the percent of the total debt that was current .",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_debt_2018",
+          "arg2": "text",
+          "res": "6415200"
+        },
+        {
+          "op": "extract",
+          "arg1": "current_debt_2018",
+          "arg2": "text",
+          "res": "740700"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "current_debt_percentage",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "total_debt_2018",
+          "arg2": "current_debt_2018",
+          "res": "11.54601571268238"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "11.5%"
+        }
+      ],
+      "variables": {
+        "total_debt_2018": 6415200,
+        "current_debt_2018": 740700,
+        "current_debt_percentage": 11.54601571268238
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_ORLY/2015/page_28.pdf-4",
+      "question": "what is the roi of an investment in the o'reilly automotive inc . from 2010 to 2011?",
+      "expected_answer": "32%",
+      "predicted_answer": "32.0%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the roi of an investment in the o'reilly automotive inc . from 2010 to 2011?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "investment_value_2010",
+          "arg2": "text",
+          "res": "100"
+        },
+        {
+          "op": "extract",
+          "arg1": "investment_value_2011",
+          "arg2": "table[row=2, column=2, investment value on December 31, 2011]",
+          "res": "132"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "investment_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "roi_percentage",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "investment_value_2010",
+          "arg2": "investment_value_2011",
+          "res": "32"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "investment_value_2010",
+          "arg2": "investment_value_2011",
+          "res": "32.0"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "32.0%"
+        }
+      ],
+      "variables": {
+        "investment_value_2010": 100,
+        "investment_value_2011": 132,
+        "investment_change": 32,
+        "roi_percentage": 32.0
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_SWKS/2010/page_105.pdf-2",
+      "question": "what is the percent increase in cash and cash equivalents from year 2009 to 2010?",
+      "expected_answer": "24.4%",
+      "predicted_answer": "24.4%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the percent increase in cash and cash equivalents from year 2009 to 2010?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "cash_2009",
+          "arg2": "table[row=2, column=2, cash and cash equivalents for 2009]",
+          "res": "364221"
+        },
+        {
+          "op": "extract",
+          "arg1": "cash_2010",
+          "arg2": "table[row=3, column=2, cash and cash equivalents for 2010]",
+          "res": "453257"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "cash_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_increase",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "cash_2009",
+          "arg2": "cash_2010",
+          "res": "89036"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "cash_2009",
+          "arg2": "cash_2010",
+          "res": "24.445597590473916"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "24.4%"
+        }
+      ],
+      "variables": {
+        "cash_2009": 364221,
+        "cash_2010": 453257,
+        "cash_change": 89036,
+        "percentage_increase": 24.445597590473916
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_MRO/2004/page_57.pdf-4",
+      "question": "by what percent did effects of foreign operations decrease from 2002 to 2004?",
+      "expected_answer": "-76.8%",
+      "predicted_answer": "-12.5%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "by what percent did effects of foreign operations decrease from 2002 to 2004?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "foreign_operations_2002",
+          "arg2": "text",
+          "res": "8"
+        },
+        {
+          "op": "extract",
+          "arg1": "foreign_operations_2004",
+          "arg2": "text",
+          "res": "9"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "foreign_operations_decrease",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_decrease",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "foreign_operations_2002",
+          "arg2": "foreign_operations_2004",
+          "res": "-1"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "foreign_operations_2002",
+          "arg2": "foreign_operations_2004",
+          "res": "-12.5"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-12.5%"
+        }
+      ],
+      "variables": {
+        "foreign_operations_2002": 8,
+        "foreign_operations_2004": 9,
+        "foreign_operations_decrease": -1,
+        "percentage_decrease": -12.5
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_ETR/2011/page_22.pdf-3",
+      "question": "what was the percentage change of the net revenue in 2010",
+      "expected_answer": "7.61%",
+      "predicted_answer": "7.6%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage change of the net revenue in 2010",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_2010",
+          "arg2": "table[row=2, column=2, net revenue for 2010]",
+          "res": "5051"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_2009",
+          "arg2": "table[row=1, column=2, net revenue for 2009]",
+          "res": "4694"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "revenue_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "revenue_2010",
+          "arg2": "revenue_2009",
+          "res": "357"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "revenue_2010",
+          "arg2": "revenue_2009",
+          "res": "7.605453770771198"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "7.6%"
+        }
+      ],
+      "variables": {
+        "revenue_2010": 5051,
+        "revenue_2009": 4694,
+        "revenue_change": 357,
+        "percentage_change": 7.605453770771198
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_IP/2007/page_19.pdf-2",
+      "question": "what was the percentage change in industry segment operating profits from 2006 to 2007?",
+      "expected_answer": "17%",
+      "predicted_answer": "16.8%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage change in industry segment operating profits from 2006 to 2007?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "operating_profit_2007",
+          "arg2": "text",
+          "res": "2423"
+        },
+        {
+          "op": "extract",
+          "arg1": "operating_profit_2006",
+          "arg2": "text",
+          "res": "2074"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "profit_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "operating_profit_2007",
+          "arg2": "operating_profit_2006",
+          "res": "349"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "operating_profit_2007",
+          "arg2": "operating_profit_2006",
+          "res": "16.82738669238187"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "16.8%"
+        }
+      ],
+      "variables": {
+        "operating_profit_2007": 2423,
+        "operating_profit_2006": 2074,
+        "profit_change": 349,
+        "percentage_change": 16.82738669238187
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_RCL/2006/page_37.pdf-2",
+      "question": "what was the percentage increase in the cash and cash equivalents from 2005 to 2006",
+      "expected_answer": "-16.6%",
+      "predicted_answer": "-16.6%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage increase in the cash and cash equivalents from 2005 to 2006",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "cash_2006",
+          "arg2": "table[row=1, column=2, cash and cash equivalents for 2006]",
+          "res": "104520"
+        },
+        {
+          "op": "extract",
+          "arg1": "cash_2005",
+          "arg2": "table[row=1, column=1, cash and cash equivalents for 2005]",
+          "res": "125385"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "cash_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_increase",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "cash_2006",
+          "arg2": "cash_2005",
+          "res": "-20865"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "cash_2006",
+          "arg2": "cash_2005",
+          "res": "-16.640746500777606"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-16.6%"
+        }
+      ],
+      "variables": {
+        "cash_2006": 104520,
+        "cash_2005": 125385,
+        "cash_change": -20865,
+        "percentage_increase": -16.640746500777606
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_MRO/2008/page_135.pdf-1",
+      "question": "by how much did asset retirement obligations decrease from 2007 to 2008?",
+      "expected_answer": "-14.9%",
+      "predicted_answer": "169",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "by how much did asset retirement obligations decrease from 2007 to 2008?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "asset_retirement_obligations_2008",
+          "arg2": "table[row=1, column=2, asset retirement obligations for 2008]",
+          "res": "965"
+        },
+        {
+          "op": "extract",
+          "arg1": "asset_retirement_obligations_2007",
+          "arg2": "table[row=1, column=3, asset retirement obligations for 2007]",
+          "res": "1134"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "decrease_in_obligations",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "asset_retirement_obligations_2008",
+          "arg2": "asset_retirement_obligations_2007",
+          "res": "169"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "169"
+        }
+      ],
+      "variables": {
+        "asset_retirement_obligations_2008": 965,
+        "asset_retirement_obligations_2007": 1134,
+        "decrease_in_obligations": 169
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_IP/2009/page_36.pdf-1",
+      "question": "north american printing papers net sales where what percent of total printing paper sales in 2009?",
+      "expected_answer": "49%",
+      "predicted_answer": "55.3%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "north american printing papers net sales where what percent of total printing paper sales in 2009?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "north_american_sales_2009",
+          "arg2": "text",
+          "res": "2800"
+        },
+        {
+          "op": "extract",
+          "arg1": "brazilian_sales_2009",
+          "arg2": "text",
+          "res": "960"
+        },
+        {
+          "op": "extract",
+          "arg1": "european_sales_2009",
+          "arg2": "text",
+          "res": "1300"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "total_sales_2009",
+          "arg2": "range_check_for_addition",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "north_american_sales_percentage",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "add2-1",
+          "arg1": "north_american_sales_2009",
+          "arg2": "brazilian_sales_2009",
+          "res": "5060"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "north_american_sales_2009",
+          "arg2": "total_sales_2009",
+          "res": "55.33596837944664"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "55.3%"
+        }
+      ],
+      "variables": {
+        "north_american_sales_2009": 2800,
+        "brazilian_sales_2009": 960,
+        "european_sales_2009": 1300,
+        "total_sales_2009": 5060,
+        "north_american_sales_percentage": 55.33596837944664
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_RCL/2013/page_18.pdf",
+      "question": "how many of the total global cruise guests are not from north america or europe?",
+      "expected_answer": "3085000",
+      "predicted_answer": "2982000",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "how many of the total global cruise guests are not from north america or europe?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "global_cruise_guests_2013",
+          "arg2": "text",
+          "res": "21300000"
+        },
+        {
+          "op": "extract",
+          "arg1": "north_american_cruise_guests_percentage",
+          "arg2": "text",
+          "res": "56"
+        },
+        {
+          "op": "extract",
+          "arg1": "european_cruise_guests_percentage",
+          "arg2": "text",
+          "res": "30"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "other_regions_percentage",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "other_regions_cruise_guests",
+          "arg2": "range_check_for_multiplication",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "north_american_cruise_guests_percentage",
+          "arg2": "european_cruise_guests_percentage",
+          "res": "14"
+        },
+        {
+          "op": "multiply2-1",
+          "arg1": "global_cruise_guests_2013",
+          "arg2": "other_regions_percentage",
+          "res": "2982000.0000000005"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "2982000"
+        }
+      ],
+      "variables": {
+        "global_cruise_guests_2013": 21300000,
+        "north_american_cruise_guests_percentage": 56,
+        "european_cruise_guests_percentage": 30,
+        "other_regions_percentage": 14,
+        "other_regions_cruise_guests": 2982000.0000000005
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_RCL/2013/page_18.pdf",
+      "question": "in 2013 , what percentage of global berths came from royal caribbean?",
+      "expected_answer": "22.86%",
+      "predicted_answer": "22.9%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "in 2013 , what percentage of global berths came from royal caribbean?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_global_berths_2013",
+          "arg2": "table[row=5, column=2, total berths in 2013]",
+          "res": "432000"
+        },
+        {
+          "op": "extract",
+          "arg1": "royal_caribbean_berths_2013",
+          "arg2": "table[row=5, column=3, royal caribbean berths in 2013]",
+          "res": "98750"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "royal_caribbean_percentage_2013",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "total_global_berths_2013",
+          "arg2": "royal_caribbean_berths_2013",
+          "res": "22.858796296296298"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "22.9%"
+        }
+      ],
+      "variables": {
+        "total_global_berths_2013": 432000,
+        "royal_caribbean_berths_2013": 98750,
+        "royal_caribbean_percentage_2013": 22.858796296296298
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_AAPL/2010/page_42.pdf-2",
+      "question": "by how much did total other income and expense decrease from 2008 to 2009?",
+      "expected_answer": "47.4%",
+      "predicted_answer": "294",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "by how much did total other income and expense decrease from 2008 to 2009?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "other_income_expense_2008",
+          "arg2": "text",
+          "res": "620"
+        },
+        {
+          "op": "extract",
+          "arg1": "other_income_expense_2009",
+          "arg2": "text",
+          "res": "326"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "decrease_in_other_income_expense",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "other_income_expense_2008",
+          "arg2": "other_income_expense_2009",
+          "res": "294"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "294"
+        }
+      ],
+      "variables": {
+        "other_income_expense_2008": 620,
+        "other_income_expense_2009": 326,
+        "decrease_in_other_income_expense": 294
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_ADBE/2009/page_98.pdf",
+      "question": "what is the growth rate in the other assets from 2008 to 2009?",
+      "expected_answer": "-11.7%",
+      "predicted_answer": "-11.7%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what is the growth rate in the other assets from 2008 to 2009?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "other_assets_2009",
+          "arg2": "table[row=1, column=2, other assets as of November 27, 2009]",
+          "res": "191265"
+        },
+        {
+          "op": "extract",
+          "arg1": "other_assets_2008",
+          "arg2": "table[row=2, column=2, other assets as of November 28, 2008]",
+          "res": "216529"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "change_in_other_assets",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_growth_other_assets",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "other_assets_2009",
+          "arg2": "other_assets_2008",
+          "res": "-25264"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "other_assets_2009",
+          "arg2": "other_assets_2008",
+          "res": "-11.667721182843868"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-11.7%"
+        }
+      ],
+      "variables": {
+        "other_assets_2009": 191265,
+        "other_assets_2008": 216529,
+        "change_in_other_assets": -25264,
+        "percentage_growth_other_assets": -11.667721182843868
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_ADBE/2009/page_98.pdf",
+      "question": "what portion of the prepaid rent is used during 2009?",
+      "expected_answer": "-1281",
+      "predicted_answer": "1,281",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what portion of the prepaid rent is used during 2009?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "prepaid_rent_2008",
+          "arg2": "table[row=1, column=2, prepaid rent as of November 28, 2008]",
+          "res": "2658"
+        },
+        {
+          "op": "extract",
+          "arg1": "prepaid_rent_2009",
+          "arg2": "table[row=1, column=3, prepaid rent as of November 27, 2009]",
+          "res": "1377"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "prepaid_rent_used_2009",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "prepaid_rent_2008",
+          "arg2": "prepaid_rent_2009",
+          "res": "1281"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "1,281"
+        }
+      ],
+      "variables": {
+        "prepaid_rent_2008": 2658,
+        "prepaid_rent_2009": 1377,
+        "prepaid_rent_used_2009": 1281
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_GPN/2017/page_91.pdf-2",
+      "question": "what was the percentage chaning in the total fair value of restricted stock and performance awards vested from 2016 to 2017?",
+      "expected_answer": "69%",
+      "predicted_answer": "68.5%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage chaning in the total fair value of restricted stock and performance awards vested from 2016 to 2017?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "fair_value_2017",
+          "arg2": "text",
+          "res": "33700000"
+        },
+        {
+          "op": "extract",
+          "arg1": "fair_value_2016",
+          "arg2": "text",
+          "res": "20000000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "fair_value_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "fair_value_2017",
+          "arg2": "fair_value_2016",
+          "res": "13700000"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "fair_value_2017",
+          "arg2": "fair_value_2016",
+          "res": "68.5"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "68.5%"
+        }
+      ],
+      "variables": {
+        "fair_value_2017": 33700000,
+        "fair_value_2016": 20000000,
+        "fair_value_change": 13700000,
+        "percentage_change": 68.5
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_RE/2013/page_40.pdf-1",
+      "question": "what are the total pre-tax catastrophe losses in the last three years?",
+      "expected_answer": "1905.4",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what are the total pre-tax catastrophe losses in the last three years?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "catastrophe_losses_2021",
+          "arg2": "table[row=1, column=2, pre-tax catastrophe losses for 2021]",
+          "res": "None"
+        },
+        {
+          "op": "extract",
+          "arg1": "catastrophe_losses_2020",
+          "arg2": "table[row=2, column=2, pre-tax catastrophe losses for 2020]",
+          "res": "None"
+        },
+        {
+          "op": "extract",
+          "arg1": "catastrophe_losses_2019",
+          "arg2": "table[row=3, column=2, pre-tax catastrophe losses for 2019]",
+          "res": "None"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        }
+      ],
+      "variables": {
+        "catastrophe_losses_2021": null,
+        "catastrophe_losses_2020": null,
+        "catastrophe_losses_2019": null
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_IP/2012/page_57.pdf-2",
+      "question": "what percentage where north american consumer packaging net sales of total consumer packaging sales in 2011?",
+      "expected_answer": "67%",
+      "predicted_answer": "57277.6%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what percentage where north american consumer packaging net sales of total consumer packaging sales in 2011?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "north_american_sales_2011",
+          "arg2": "text",
+          "res": "2500000"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_consumer_packaging_sales_2011",
+          "arg2": "text",
+          "res": "4364.71"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_north_american_sales",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "north_american_sales_2011",
+          "arg2": "total_consumer_packaging_sales_2011",
+          "res": "57277.573996897845"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "57277.6%"
+        }
+      ],
+      "variables": {
+        "north_american_sales_2011": 2500000,
+        "total_consumer_packaging_sales_2011": 4364.71,
+        "percentage_north_american_sales": 57277.573996897845
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_ILMN/2006/page_86.pdf-3",
+      "question": "what was the percent of the growth in the revenues from 2005 to 2006",
+      "expected_answer": "45.3%",
+      "predicted_answer": "45.3%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percent of the growth in the revenues from 2005 to 2006",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_2006",
+          "arg2": "table[row=2, column=2, revenue in row for 2006]",
+          "res": "73501"
+        },
+        {
+          "op": "extract",
+          "arg1": "revenue_2005",
+          "arg2": "table[row=3, column=2, revenue in row for 2005]",
+          "res": "50583"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "revenue_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_growth",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "revenue_2006",
+          "arg2": "revenue_2005",
+          "res": "22918"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "revenue_2006",
+          "arg2": "revenue_2005",
+          "res": "45.30771207718008"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "45.3%"
+        }
+      ],
+      "variables": {
+        "revenue_2006": 73501,
+        "revenue_2005": 50583,
+        "revenue_change": 22918,
+        "percentage_growth": 45.30771207718008
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_NKE/2015/page_37.pdf",
+      "question": "what percent of the total for 2017 was due to endorsement contracts?",
+      "expected_answer": "58%",
+      "predicted_answer": "58.4%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what percent of the total for 2017 was due to endorsement contracts?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_2017",
+          "arg2": "table[row=1, column=2, total revenue for 2017]",
+          "res": "1573"
+        },
+        {
+          "op": "extract",
+          "arg1": "endorsement_contracts_2017",
+          "arg2": "table[row=2, column=2, endorsement contracts for 2017]",
+          "res": "919"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "endorsement_percentage_2017",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "total_2017",
+          "arg2": "endorsement_contracts_2017",
+          "res": "58.42339478703115"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "58.4%"
+        }
+      ],
+      "variables": {
+        "total_2017": 1573,
+        "endorsement_contracts_2017": 919,
+        "endorsement_percentage_2017": 58.42339478703115
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_NKE/2015/page_37.pdf",
+      "question": "what percent of the total for all years was due to contributions form the year 2020?",
+      "expected_answer": "5%",
+      "predicted_answer": "13.0%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what percent of the total for all years was due to contributions form the year 2020?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "contribution_2020",
+          "arg2": "table[row=3, column=2, contribution amount for the year 2020]",
+          "res": "2014"
+        },
+        {
+          "op": "extract",
+          "arg1": "total_contributions",
+          "arg2": "table[total contributions for all years]",
+          "res": "15473"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_contribution_2020",
+          "arg2": "range_check_for_division",
+          "res": "valid_result"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "contribution_2020",
+          "arg2": "total_contributions",
+          "res": "13.016221805726103"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "13.0%"
+        }
+      ],
+      "variables": {
+        "contribution_2020": 2014,
+        "total_contributions": 15473,
+        "percentage_contribution_2020": 13.016221805726103
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_LKQ/2018/page_102.pdf-2",
+      "question": "what was the percentage change in rental expenses from 2017 to 2018?",
+      "expected_answer": "21%",
+      "predicted_answer": "21.5%",
+      "exact_match": false,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage change in rental expenses from 2017 to 2018?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "rental_expense_2018",
+          "arg2": "text",
+          "res": "300000000"
+        },
+        {
+          "op": "extract",
+          "arg1": "rental_expense_2017",
+          "arg2": "text",
+          "res": "247000000"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "rental_expense_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_rental_expense",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "rental_expense_2018",
+          "arg2": "rental_expense_2017",
+          "res": "53000000"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "rental_expense_2018",
+          "arg2": "rental_expense_2017",
+          "res": "21.45748987854251"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "21.5%"
+        }
+      ],
+      "variables": {
+        "rental_expense_2018": 300000000,
+        "rental_expense_2017": 247000000,
+        "rental_expense_change": 53000000,
+        "percentage_change_rental_expense": 21.45748987854251
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_DRE/2007/page_39.pdf-4",
+      "question": "what was the percent of the growth in the recurring tenant improvements from 2006 to 2007",
+      "expected_answer": "8.1%",
+      "predicted_answer": "8.1%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percent of the growth in the recurring tenant improvements from 2006 to 2007",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "tenant_improvements_2007",
+          "arg2": "table[row=2, column=2, recurring tenant improvements for 2007]",
+          "res": "45296"
+        },
+        {
+          "op": "extract",
+          "arg1": "tenant_improvements_2006",
+          "arg2": "table[row=3, column=2, recurring tenant improvements for 2006]",
+          "res": "41895"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "tenant_improvements_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "tenant_improvements_percentage_growth",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "tenant_improvements_2007",
+          "arg2": "tenant_improvements_2006",
+          "res": "3401"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "tenant_improvements_2007",
+          "arg2": "tenant_improvements_2006",
+          "res": "8.117913832199546"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "8.1%"
+        }
+      ],
+      "variables": {
+        "tenant_improvements_2007": 45296,
+        "tenant_improvements_2006": 41895,
+        "tenant_improvements_change": 3401,
+        "tenant_improvements_percentage_growth": 8.117913832199546
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_DISCA/2012/page_54.pdf-4",
+      "question": "what was the percentage cumulative total shareholder return on disca common stock from september 18 , 2008 to december 31 , 2012?",
+      "expected_answer": "359.67%",
+      "predicted_answer": "18.2%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage cumulative total shareholder return on disca common stock from september 18 , 2008 to december 31 , 2012?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "initial_investment",
+          "arg2": "text",
+          "res": "100"
+        },
+        {
+          "op": "extract",
+          "arg1": "final_value_2012",
+          "arg2": "table[row=5, column=2, final value of investment on December 31, 2012]",
+          "res": "118.21"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "investment_change",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_cumulative_return",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "initial_investment",
+          "arg2": "final_value_2012",
+          "res": "18.209999999999994"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "initial_investment",
+          "arg2": "final_value_2012",
+          "res": "18.209999999999994"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "18.2%"
+        }
+      ],
+      "variables": {
+        "initial_investment": 100,
+        "final_value_2012": 118.21,
+        "investment_change": 18.209999999999994,
+        "percentage_cumulative_return": 18.209999999999994
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_MMM/2007/page_38.pdf-2",
+      "question": "what was the percentage change in the net cash used in investing activities from 2006 to 2007",
+      "expected_answer": "-6.4%",
+      "predicted_answer": "-6.4%",
+      "exact_match": true,
+      "precision_match": true,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what was the percentage change in the net cash used in investing activities from 2006 to 2007",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_cash_investing_2006",
+          "arg2": "table[row=1, column=2, net cash used in investing activities for 2006]",
+          "res": "1460"
+        },
+        {
+          "op": "extract",
+          "arg1": "net_cash_investing_2007",
+          "arg2": "table[row=2, column=2, net cash used in investing activities for 2007]",
+          "res": "1367"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "change_investing_cash",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "percentage_change_investing_cash",
+          "arg2": "range_check_for_percentage_change",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "net_cash_investing_2006",
+          "arg2": "net_cash_investing_2007",
+          "res": "-93"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "net_cash_investing_2006",
+          "arg2": "net_cash_investing_2007",
+          "res": "-6.36986301369863"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "-6.4%"
+        }
+      ],
+      "variables": {
+        "net_cash_investing_2006": 1460,
+        "net_cash_investing_2007": 1367,
+        "change_investing_cash": -93,
+        "percentage_change_investing_cash": -6.36986301369863
+      },
+      "error": null
+    },
+    {
+      "example_id": "Single_D/2002/page_39.pdf-2",
+      "question": "if the 2003 growth rate is the same as 2002 , what would 2003 gas transmission throughput be in bcf?\\\\n",
+      "expected_answer": "645",
+      "predicted_answer": "644.76",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": true,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "if the 2003 growth rate is the same as 2002 , what would 2003 gas transmission throughput be in bcf?\\\\n",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "throughput_2002",
+          "arg2": "table[row=2, column=3, gas transmission throughput for 2002]",
+          "res": "597"
+        },
+        {
+          "op": "extract",
+          "arg1": "growth_rate_2002",
+          "arg2": "text",
+          "res": "8"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_1",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "throughput_2003",
+          "arg2": "range_check_for_multiplication",
+          "res": "valid_result"
+        },
+        {
+          "op": "multiply2-1",
+          "arg1": "throughput_2002",
+          "arg2": "growth_rate_2002",
+          "res": "644.76"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "644.76"
+        }
+      ],
+      "variables": {
+        "throughput_2002": 597,
+        "growth_rate_2002": 8,
+        "throughput_2003": 644.76
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_TSCO/2017/page_73.pdf",
+      "question": "what percent of the 2017 end goodwill balance is the goodwill from the acquisition?",
+      "expected_answer": "89.14%",
+      "predicted_answer": "2.2%",
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [
+        {
+          "op": "plan",
+          "arg1": "what percent of the 2017 end goodwill balance is the goodwill from the acquisition?",
+          "arg2": "",
+          "res": "solution_plan_created"
+        },
+        {
+          "op": "extract",
+          "arg1": "goodwill_2017",
+          "arg2": "text",
+          "res": "93200"
+        },
+        {
+          "op": "extract",
+          "arg1": "goodwill_2016",
+          "arg2": "text",
+          "res": "94400"
+        },
+        {
+          "op": "extract",
+          "arg1": "acquisition_goodwill",
+          "arg2": "table[row=2, column=2, goodwill from acquisition]",
+          "res": "2014"
+        },
+        {
+          "op": "validate",
+          "arg1": "extracted_values",
+          "arg2": "",
+          "res": "validation_passed"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "1_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "change_in_goodwill",
+          "arg2": "range_check_for_subtraction",
+          "res": "valid_result"
+        },
+        {
+          "op": "set_calculation_step",
+          "arg1": "current_step",
+          "arg2": "2_of_2",
+          "res": "step_set"
+        },
+        {
+          "op": "validate",
+          "arg1": "acquisition_goodwill_percentage",
+          "arg2": "range_check_for_ratio",
+          "res": "valid_result"
+        },
+        {
+          "op": "minus2-1",
+          "arg1": "goodwill_2017",
+          "arg2": "goodwill_2016",
+          "res": "-1200"
+        },
+        {
+          "op": "divide2-1",
+          "arg1": "goodwill_2017",
+          "arg2": "acquisition_goodwill",
+          "res": "2.1609442060085837"
+        },
+        {
+          "op": "answer",
+          "arg1": "final_result",
+          "arg2": "",
+          "res": "2.2%"
+        }
+      ],
+      "variables": {
+        "goodwill_2017": 93200,
+        "goodwill_2016": 94400,
+        "acquisition_goodwill": 2014,
+        "change_in_goodwill": -1200,
+        "acquisition_goodwill_percentage": 2.1609442060085837
+      },
+      "error": null
+    },
+    {
+      "example_id": "Double_TSCO/2017/page_73.pdf",
+      "question": "what percent did the company's goodwill balance increase between the between the beginning of 2016 and the end of 2017?",
+      "expected_answer": "808.5%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_ILMN/2006/page_86.pdf-1",
+      "question": "what was the percentage change in revenues between 2005 and 2006?",
+      "expected_answer": "45%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_MRO/2011/page_39.pdf-1",
+      "question": "by how much did total revenues increase from 2010 to 2011?",
+      "expected_answer": "25.4%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_LMT/2018/page_29.pdf-1",
+      "question": "what is the percentage change in total dividends paid per share from 2017 to 2018?",
+      "expected_answer": "9.9%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_GPN/2007/page_97.pdf",
+      "question": "what is the total number of approved securities by the security holders?",
+      "expected_answer": "12950000",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_GPN/2007/page_97.pdf",
+      "question": "what portion of the approved securities is issued?",
+      "expected_answer": "39.9%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_CE/2017/page_20.pdf-2",
+      "question": "what was the percentage change in the research and development costs from 2015 to 2016",
+      "expected_answer": "-34.4%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_RE/2012/page_31.pdf-3",
+      "question": "what is the percentage change in net reserves from 2011 to 2012?",
+      "expected_answer": "-11.3%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_UPS/2012/page_51.pdf-1",
+      "question": "what is the growth rate in the net income from 2011 to 2012?",
+      "expected_answer": "-78.8%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_MO/2017/page_10.pdf-4",
+      "question": "what is the percentage change in the weight of smokeless products in operating income from 2015 to 2016?",
+      "expected_answer": "2.3%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_CMCSA/2004/page_30.pdf",
+      "question": "what percentage of total cable segment capital expenditures in 2004 where due to upgrading of cable systems?",
+      "expected_answer": "25%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_CMCSA/2004/page_30.pdf",
+      "question": "what percentage of total cable segment capital expenditures in 2005 where due to upgrading of cable systems?",
+      "expected_answer": "7%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_STT/2014/page_69.pdf-2",
+      "question": "what is the percentage change in the average total short-duration advances from 2013 to 2014?",
+      "expected_answer": "3.1%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_MRO/2009/page_127.pdf-1",
+      "question": "by what percentage did asset retirement obligations increase from 2008 to 2009?",
+      "expected_answer": "14.2%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_AMT/2010/page_111.pdf",
+      "question": "at december 31 , 2010 what was the percent of the total net operating loss carry forwards set to expire between 2021 and 2025",
+      "expected_answer": "64.6%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_AMT/2010/page_111.pdf",
+      "question": "what is the total net operating loss carryforwards?",
+      "expected_answer": "2484034",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_UAA/2017/page_52.pdf",
+      "question": "what percentage of operating income was the emea segment in 2016?",
+      "expected_answer": "3%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_UAA/2017/page_52.pdf",
+      "question": "what portion of total operating income is generated by north america segment in 2016?",
+      "expected_answer": "97.8%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_IP/2007/page_30.pdf-2",
+      "question": "what percent of printing papers sales in 2006 was from north american printing papers net sales?",
+      "expected_answer": "66%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Single_AAL/2015/page_51.pdf-3",
+      "question": "by how much did american airlines group inc . common stock out preform the s&p 500 index over the 4 year period?",
+      "expected_answer": "48%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_LKQ/2009/page_77.pdf",
+      "question": "what was the percentage change in rental expense for operating leases from 2007 to 2008?",
+      "expected_answer": "84%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    },
+    {
+      "example_id": "Double_LKQ/2009/page_77.pdf",
+      "question": "what was the percentage change in rental expense for operating leases from 2008 to 2009?",
+      "expected_answer": "17%",
+      "predicted_answer": null,
+      "exact_match": false,
+      "precision_match": false,
+      "tolerance_match": false,
+      "steps": [],
+      "variables": {},
+      "error": null
+    }
+  ],
+  "metrics": {
+    "total_examples": 100,
+    "exact_match": 21,
+    "precision_match": 35,
+    "tolerance_match": 45,
+    "errors": 0,
+    "exact_match_accuracy": 0.21,
+    "precision_match_accuracy": 0.35,
+    "tolerance_match_accuracy": 0.45,
+    "error_rate": 0.0
+  }
+}
