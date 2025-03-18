@@ -402,7 +402,7 @@ Errors: 0 (0.00%)
 ===========================
 ```
 
-#### Why These Three Metrics
+#### Why These Three Metrics Were Chosen?
 
 1. **Exact Match (21%)**
    - **Purpose**: Verifies character-for-character correctness after normalization
@@ -432,7 +432,7 @@ Errors: 0 (0.00%)
 
 1. **Formatting Consistency**: The gap between exact match and precision match (14%) indicates formatting inconsistencies that could be standardized.
 
-2. **Accuracy Ceiling**: Even with the most forgiving metric, we achieve 45% accuracy, indicating substantial room for improvement in:
+2. **Accuracy Ceiling**: Even with the most forgiving metric, it achieves 45% accuracy, indicating substantial room for improvement in:
    - Better table data extraction
    - More robust handling of complex financial terminology
    - Enhanced reasoning for multi-step calculations
