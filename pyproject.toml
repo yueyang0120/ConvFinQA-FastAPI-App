@@ -1,5 +1,5 @@
 [project]
-name = "finqa"
+name = "agentic-financial-qa-api"
 version = "0.1.0"
 description = "Agentic financial question-answering API with LangGraph and FastAPI"
 authors = [
@@ -7,6 +7,7 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
+keywords = ["financial-qa", "fastapi", "langgraph", "llm", "agentic-ai"]
 dependencies = [
     "fastapi (>=0.115.11,<0.116.0)",
     "uvicorn (>=0.34.0,<0.35.0)",
@@ -23,6 +24,9 @@ dependencies = [
     "langchain-openai (>=0.3.8,<0.4.0)",
     "langgraph (>=0.3.11,<0.4.0)"
 ]
+
+[tool.poetry]
+packages = [{ include = "agentic_financial_qa" }]
 
 
 [build-system]

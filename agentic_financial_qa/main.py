@@ -8,7 +8,7 @@ from fastapi import FastAPI
 from starlette.responses import RedirectResponse
 
 # Import API routers
-from src.api.routes import router as finqa_router
+from agentic_financial_qa.api.routes import router as finqa_router
 
 # Create FastAPI app
 app = FastAPI(

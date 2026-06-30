@@ -20,7 +20,7 @@ from tqdm import tqdm
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Import the workflow
-from src.core.workflow import process_financial_question
+from agentic_financial_qa.core.workflow import process_financial_question
 
 # Constants
 ABSOLUTE_EPSILON = 0.05  # For small values (absolute difference)

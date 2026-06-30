@@ -5,7 +5,7 @@ Tests for the Financial QA API.
 import json
 from fastapi.testclient import TestClient
 
-from src.main import app
+from agentic_financial_qa.main import app
 
 client = TestClient(app)
 
@@ -24,5 +24,9 @@ def test_root_redirect():
     assert response.headers["location"] == "/docs"
 
 
-# NOTE: Add more detailed API tests here when needed
-# They would be integration tests since they would require the LLM to be available 
+def test_openapi_schema_includes_financial_qa_route():
+    """Test that the public API contract exposes the financial QA endpoint."""
+    response = client.get("/openapi.json")
+
+    assert response.status_code == 200
+    assert "/financial-qa/questions" in response.json()["paths"]

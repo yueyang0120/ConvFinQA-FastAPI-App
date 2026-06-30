@@ -4,8 +4,8 @@ API routes for the Financial QA system.
 
 from fastapi import APIRouter, HTTPException
 
-from src.api.models import FinQARequest, FinQAResponse
-from src.core.workflow import process_financial_question
+from agentic_financial_qa.api.models import FinQARequest, FinQAResponse
+from agentic_financial_qa.core.workflow import process_financial_question
 
 # Create router
 router = APIRouter(
@@ -52,6 +52,8 @@ def process_question(request: FinQARequest):
         
         return result
         
+    except HTTPException:
+        raise
     except Exception as e:
         # Handle any unexpected errors
         raise HTTPException(status_code=500, detail=f"An error occurred while processing the question: {str(e)}") 

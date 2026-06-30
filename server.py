@@ -43,7 +43,7 @@ def main():
     
     # Start the server
     print(f"Starting Financial QA API server on {args.host}:{args.port}...")
-    uvicorn.run("src.main:app", host=args.host, port=args.port, log_level=args.log_level, reload=True)
+    uvicorn.run("agentic_financial_qa.main:app", host=args.host, port=args.port, log_level=args.log_level, reload=True)
 
 
 if __name__ == "__main__":

@@ -16,16 +16,30 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Initialize LLM
-api_key = os.environ.get("OPENAI_API_KEY")
-if not api_key:
-    raise ValueError("OPENAI_API_KEY environment variable is not set. Please set it in your .env file.")
+DEFAULT_MODEL = os.environ.get("FINQA_OPENAI_MODEL", "gpt-4o")
+_llm: Optional[ChatOpenAI] = None
 
-llm = ChatOpenAI(
-    model="gpt-4o", 
-    temperature=0,
-    openai_api_key=api_key
-)
+
+def get_llm() -> ChatOpenAI:
+    """Create the OpenAI client lazily so health/docs routes can load without API keys."""
+    global _llm
+
+    if _llm is not None:
+        return _llm
+
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "OPENAI_API_KEY is required for financial QA inference. "
+            "Health checks and OpenAPI docs do not require it."
+        )
+
+    _llm = ChatOpenAI(
+        model=DEFAULT_MODEL,
+        temperature=0,
+        openai_api_key=api_key,
+    )
+    return _llm
 
 # Define state model
 class FinQAState(TypedDict):
@@ -164,7 +178,7 @@ def create_solution_plan(state: FinQAState) -> FinQAState:
     
     # Call LLM to generate solution plan
     print("Calling LLM to generate solution plan...")
-    result = llm.invoke([
+    result = get_llm().invoke([
         SystemMessage(content="You are a financial analysis expert. Always respond with valid JSON only. Include complete mathematical expressions in your calculation steps."), 
         HumanMessage(content=prompt)
     ])
@@ -309,7 +323,7 @@ def extract_data(state: FinQAState) -> FinQAState:
     """
     
     # Call LLM for extraction
-    extract_result = llm.invoke([
+    extract_result = get_llm().invoke([
         SystemMessage(content="You are a financial data extraction expert. Always respond with valid JSON only."),
         HumanMessage(content=extraction_prompt)
     ])
@@ -660,7 +674,7 @@ def generate_answer(state: FinQAState) -> FinQAState:
     """
     
     # Call LLM for formatting only
-    format_result = llm.invoke([
+    format_result = get_llm().invoke([
         SystemMessage(content="You are a financial data formatting expert. Return only the formatted value, nothing else."), 
         HumanMessage(content=prompt)
     ])

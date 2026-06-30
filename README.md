@@ -4,6 +4,16 @@ FastAPI service for answering financial questions over mixed text and table inpu
 
 This project is based on ConvFinQA-style tasks: questions often require locating values across financial narrative text and tables, applying multi-step arithmetic, and formatting the final answer in a finance-appropriate way.
 
+## At a Glance
+
+| Area | Implementation signal |
+| --- | --- |
+| Product problem | Turn financial narrative + table inputs into traceable numeric answers. |
+| Agent workflow | LangGraph stages for planning, extraction, calculation, and final response generation. |
+| API layer | FastAPI endpoint with typed Pydantic request/response contracts. |
+| Evaluation | Batch runner with exact-match, numeric precision, and scale-aware tolerance metrics. |
+| FDE relevance | Converts an ambiguous domain workflow into an inspectable, API-backed system with clear failure surfaces. |
+
 ## Why This Project
 
 Financial QA is a useful test bed for applied LLM systems because the answer is rarely just a paragraph lookup. A reliable system needs to:
@@ -44,6 +54,16 @@ The workflow is implemented with LangGraph and a typed state object (`FinQAState
 - Step-level trace output so the caller can inspect how a number was derived.
 - Batch inference script for running examples from the ConvFinQA dataset.
 - Evaluation helpers for exact match, precision-aware numeric comparison, and scale-aware tolerance matching.
+
+## Review Guide
+
+If you are scanning this repository, the most relevant implementation areas are:
+
+- `agentic_financial_qa/core/workflow.py`: LangGraph workflow, typed state, planning/extraction/calculation stages, and trace generation.
+- `agentic_financial_qa/api/models.py`: Pydantic request/response contracts for mixed financial text/table inputs.
+- `agentic_financial_qa/api/routes.py`: FastAPI boundary and error handling around the agentic workflow.
+- `scripts/batch_inference_eval_finqa.py`: dataset runner and numeric-aware evaluation metrics.
+- `tests/test_api.py`: lightweight API contract checks that do not require an OpenAI key.
 
 ## API Surface
 
@@ -134,7 +154,10 @@ Create a local `.env` file:
 
 ```env
 OPENAI_API_KEY=...
+FINQA_OPENAI_MODEL=gpt-4o
 ```
+
+You can also copy `.env.example` and fill in your local key. Health checks and OpenAPI docs load without an API key; only the inference endpoint requires `OPENAI_API_KEY`.
 
 Run the API:
 
@@ -145,13 +168,19 @@ poetry run python server.py
 Or specify host and port:
 
 ```bash
-poetry run python server.py --host 127.0.0.1 --port 5000
+poetry run python server.py --host 127.0.0.1 --port 8000
 ```
 
 Open the API docs:
 
 ```text
 http://127.0.0.1:8000/docs
+```
+
+Run local tests:
+
+```bash
+poetry run pytest -q
 ```
 
 ## Batch Evaluation
@@ -176,7 +205,7 @@ Generated evaluation output is intentionally ignored by git so the repository st
 ```text
 .
 ├── server.py                         API server entry point
-├── src/
+├── agentic_financial_qa/
 │   ├── main.py                       FastAPI app definition
 │   ├── api/
 │   │   ├── models.py                 Pydantic request/response models
