@@ -50,3 +50,4 @@ logs/
 
 # Local testing data
 temp/
+evaluation_results*.json

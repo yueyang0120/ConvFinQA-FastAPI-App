@@ -1,9 +1,9 @@
 [project]
 name = "finqa"
 version = "0.1.0"
-description = "Financial Question Answering system"
+description = "Agentic financial question-answering API with LangGraph and FastAPI"
 authors = [
-    {name = "User"}
+    {name = "Yang Yue"}
 ]
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
